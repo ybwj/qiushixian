@@ -1,0 +1,8 @@
+variable,lower_bound,upper_bound,outlier_count
+age,22.5,98.5,0
+creatinine_phosphokinase,-581.75,1280.25,29
+ejection_fraction,7.5,67.5,2
+platelets,76000.0,440000.0,21
+serum_creatinine,0.15000000000000024,2.1499999999999995,29
+serum_sodium,125.0,149.0,4
+time,-122.0,398.0,0
