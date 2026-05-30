@@ -287,20 +287,20 @@ Terminal → New Terminal
 如果输入：
 
 ```bash
-cd Task1_API
+cd TASK1
 ```
 
 出现类似：
 
 ```text
-找不到路径 Task1_API
+找不到路径 TASK1
 ```
 
 通常有两种原因：
 
 ```text
-1. 当前目录下没有 Task1_API 文件夹
-2. 你已经在 Task1_API 文件夹里面了
+1. 当前目录下没有 TASK1 文件夹
+2. 你已经在 TASK1 文件夹里面了
 ```
 
 先输入：
@@ -312,13 +312,13 @@ pwd
 查看当前路径。如果当前路径已经是：
 
 ```text
-...\Task1_API
+...\TASK1
 ```
 
 就不要再输入：
 
 ```bash
-cd Task1_API
+cd TASK1
 ```
 
 直接运行：
@@ -347,7 +347,7 @@ FileNotFoundError: data/case_report.pdf
 
 1. 输入 `pwd`；
 2. 确认自己是否在正确目录；
-3. 如果脚本在 `Task1_API` 里，就进入 `Task1_API`；
+3. 如果脚本在 `TASK1` 里，就进入 `TASK1`；
 4. 再运行脚本。
 
 更稳的写法是在代码中使用 `pathlib`：
@@ -1121,7 +1121,7 @@ python script_name.py
 
 ---
 
-## 3.3 实际案例 1：`cd Task1_API` 路径错误
+## 3.3 实际案例 1：`cd TASK1` 路径错误
 
 ### 当时目标
 
@@ -1136,28 +1136,28 @@ python test_qwen_api.py
 终端当前已经位于：
 
 ```text
-D:\医疗AI+ 科研\内部资料\新手挑战\挑战一\Task1_API
+D:\医疗AI+ 科研\内部资料\新手挑战\挑战一\TASK1
 ```
 
 但我又输入了：
 
 ```powershell
-cd Task1_API
+cd TASK1
 python test_qwen_api.py
 ```
 
 结果出现报错：
 
 ```text
-cd : 找不到路径“D:\医疗AI+ 科研\内部资料\新手挑战\Task1_API\Task1_API”，因为该路径不存在。
+cd : 找不到路径“D:\医疗AI+ 科研\内部资料\新手挑战\TASK1\TASK1”，因为该路径不存在。
 ```
 
 ### 错误原因
 
 这个错误不是 Python 代码问题，也不是 Qwen API 问题，而是**终端路径问题**。
 
-我当时已经在 `Task1_API` 文件夹里面，又执行了一次：
-cd Task1_API
+我当时已经在 `TASK1` 文件夹里面，又执行了一次：
+cd TASK1
 但这个子文件夹并不存在，所以报错。
 
 
@@ -1170,14 +1170,14 @@ cd Task1_API
 运行 test_qwen_api.py，确认 qwen-plus API 是否能正常调用。
 
 当前终端目录：
-D:\医疗AI+ 科研\内部资料\新手挑战\挑战一\Task1_API
+D:\医疗AI+ 科研\内部资料\新手挑战\挑战一\TASK1
 
 我运行的命令是：
-cd Task1_API
+cd TASK1
 python test_qwen_api.py
 
 完整报错如下：
-cd : 找不到路径“D:\医疗AI+ 科研\内部资料\新手挑战\挑战一\Task1_API\Task1_API”，因为该路径不存在。
+cd : 找不到路径“D:\医疗AI+ 科研\内部资料\新手挑战\挑战一\TASK1\TASK1”，因为该路径不存在。
 Qwen-Plus API test successful.
 
 请判断这是 Python 代码问题、API 问题，还是终端路径问题。
@@ -1189,7 +1189,7 @@ AI 分析后指出：
 
 > 这是一个终端路径问题，不是 Python 代码问题，也不是 API 问题。
 >
-> 你的终端当前已经在 Task1_API 目录下了（从报错中可以看到完整路径末尾已经是 Task1_API）。你又执行了 cd Task1_API，系统会尝试进入 Task1_API/Task1_API，这个子目录不存在，所以报错。
+> 你的终端当前已经在 TASK1 目录下了（从报错中可以看到完整路径末尾已经是 TASK1）。你又执行了 cd TASK1，系统会尝试进入 TASK1/TASK1，这个子目录不存在，所以报错。
 >
 > 但好消息是报错下面输出了 "Qwen-Plus API test successful."，说明你的 test_qwen_api.py 其实已经运行成功了。cd 的报错和 Python 脚本的执行是两个独立的操作，cd 失败了但 Python 仍然运行了。
 >
@@ -1202,7 +1202,7 @@ AI 分析后指出：
 ```bash
 # 先用 pwd 确认当前位置
 pwd
-# 输出末尾已经是 Task1_API → 直接运行
+# 输出末尾已经是 TASK1 → 直接运行
 python test_qwen_api.py
 ```
 
@@ -1217,7 +1217,7 @@ python test_qwen_api.py
 ```text
 AI_Chat_Records.md
 .gitignore
-Task1_API/
+TASK1/
 ```
 
 ### 当时的错误操作
@@ -1253,7 +1253,7 @@ Git 找不到名为 .gitignore 的文件。
 我正在完成挑战一的项目提交整理。
 
 当前目标：
-把 AI_Chat_Records.md、.gitignore 和 Task1_API 目录加入 Git 暂存区。
+把 AI_Chat_Records.md、.gitignore 和 TASK1 目录加入 Git 暂存区。
 
 我运行的命令是：
 git add AI_Chat_Records.md .gitignore 挑战一
@@ -1290,7 +1290,7 @@ AI 分析后指出：
 ls -la .gitignore
 
 # 第三步：重新添加
-git add AI_Chat_Records.md .gitignore Task1_API
+git add AI_Chat_Records.md .gitignore TASK1
 ```
 
 > 这个案例的教训是：git add 之前，先用 ls 或 dir 确认文件是否真的存在。

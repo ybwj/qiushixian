@@ -1,0 +1,5 @@
+# TASK1: Qwen-Plus API Chinese Medical Case Entity Extraction
+# Install: pip install -r requirements.txt
+openai>=1.30.0
+python-dotenv>=1.0.0
+PyMuPDF>=1.23.0
